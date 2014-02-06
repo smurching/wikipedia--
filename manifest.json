@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Wikipedia ++",
+  "description": "Loads links to relevant YouTube videos into Wikipedia articles",
+  "version": "1.0",
+
+  "permissions": [
+    "http://en.wikipedia.org/"
+  ],
+  "content_scripts" : [
+    {
+      "matches": ["http://en.wikipedia.org/*"],
+      "css": ["styles.css"],
+      "js": ["jquery.js", "insert_videos.js"]
+    }  
+  ],
+
+  "web_accessible_resources" : [
+    "jquery.js",
+    "jquery-2.0.2.min.map"
+
+  ]
+
+}
